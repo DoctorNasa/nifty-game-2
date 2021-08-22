@@ -23,28 +23,17 @@ export default class extends React.Component {
         <p>First, you will need MetaMask to run the game. To download MetaMask, click <a href="https://metamask.io/" target="_blank">here</a></p>
         
         <p>
-          Once you downloaded MetaMask, create a wallet so you can receive testnet ETH later on. See <a href="http://bit.ly/bigsmalltutorialM" target="_blank">tutorial</a>.
+          Second, top up at least 0.11 KUB to your MetaMask wallet. 0.01 KUB for mint NFT card and 0.1 KUB for betting in game.
         </p>
-        
-        <p>
-          Go to <a href="http://game.portal.network" target="_blank">Big and Small</a> and switch to Ropsten Test Network via your MetaMask.
-        </p>
-        
-        <p>After switching to Ropsten Test Network, click BUY and receive Test Faucet. Simply request 1 ether from faucet and you will receive within few minutes.</p>
-        
-        
-        <p className={cx('warning')}>***You may also play ‘Big and Small’ on IPFS, completely decentralized. Visit <a href="//game.portalnetworkweb.eth" target="_blank">game.portalnetworkweb.eth</a>***</p>
-        
-        <p className={cx('warning')}>You will need Portal Network extension to help you redirect this BNS (blockchain name service). <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">Download now</a>.</p>
         
       
         <h2>How to play the game</h2>
         <h3>Acquiring the card</h3>
-        <p>Now everything is ready. To play the game, acquire a ERC-721 card first, which will cost you 0.01 ETH. Once you sign a transaction and send it to our smart contract, you will receive a card with a random number on it. The number will be used to determine the winner later in the battle.</p>
+        <p>Now everything is ready. To play the game, acquire a ERC-721 card first, which will cost you 0.01 KUB. Once you sign a transaction and send it to our smart contract, you will receive a card with a random number on it. The number will be used to determine the winner later in the battle.</p>
         
         <h3>Card battle</h3>
         <p>Once you acquired a card, you can compete with our bot. </p>
-        <p>Choose a card and place a bet to play for the round. The bet should be between 0.01 to 1 ETH.</p>
+        <p>Choose a card and place a bet to play for the round. The bet should be between 0.01 to 1 KUB.</p>
         <p>Each round, the smart contract will randomly decide either card with larger number or smaller number wins. At the same time, the smart contract will also randomly generate a number in order to compete with the player.</p>
         <p>Depending on the round, card with larger or smaller number will be the winner.</p>
         <p>Winner of game will win the 150% of the bet put in.</p>

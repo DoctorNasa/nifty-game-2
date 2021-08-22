@@ -19,6 +19,7 @@ const chalk = require('chalk');
 const fs = require('fs-extra');
 const webpack = require('webpack');
 const config = require('../config/webpack.config.prod');
+// const config = require('../config/webpack.config.dev');
 const paths = require('../config/paths');
 const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
@@ -103,6 +104,18 @@ measureFileSizesBeforeBuild(paths.appBuild)
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
   console.log('Creating an optimized production build...');
+
+  //if(env === 'production') {
+      config.module.rules[1].oneOf[1].include = [
+        paths.appSrc,
+        path.resolve(paths.appNodeModules, 'bitcoinjs-lib'),
+        path.resolve(paths.appNodeModules, 'tiny-secp256k1'),
+        path.resolve(paths.appNodeModules, 'jsontokens'),
+        path.resolve(paths.appNodeModules, 'bip32'),
+        path.resolve(paths.appNodeModules, 'base64url'),
+        path.resolve(paths.appNodeModules, 'typeforce')
+      ];
+   // }
 
   let compiler = webpack(config);
   return new Promise((resolve, reject) => {

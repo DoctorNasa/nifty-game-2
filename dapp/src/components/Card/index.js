@@ -92,7 +92,7 @@ class Card extends Component {
 
     const tx = result;
     let t = setInterval(async ()=>{
-      const result = await axios.get(`https://api-ropsten.etherscan.io/api?module=transaction&action=gettxreceiptstatus&txhash=${tx}&apikey=RAADZVN65BQA7G839DFN3VHWCZBQMRBR11`);
+      const result = await axios.get(`https://bkcscan.com/api?module=transaction&action=gettxreceiptstatus&txhash=${tx}&apikey=RAADZVN65BQA7G839DFN3VHWCZBQMRBR11`);
 
       if(result.data.result.status === "1") {
         this.ReloadDataFn();
